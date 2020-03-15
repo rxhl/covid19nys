@@ -1,6 +1,14 @@
 # covid19nys
 
-Tracking COVID-19 cases in New York State through a CLI.
+CLI utility to track COVID-19 cases in New York state.
+
+## Usage
+
+```
+npm i -g covid19nys # or npx covid19nys
+```
+
+The above command will also download the latest version of Chromium as the package uses puppeteer.
 
 ## Development
 
