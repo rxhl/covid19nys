@@ -1,14 +1,34 @@
 # covid19nys
 
+![npm](https://img.shields.io/npm/v/covid19nys)
+
 CLI utility to track COVID-19 cases in New York state.
+
+## Install
+
+```
+npm i -g covid19nys
+```
+
+The above command will also download the latest version of Chromium as the package uses puppeteer.
 
 ## Usage
 
 ```
-npm i -g covid19nys # or npx covid19nys
-```
+covid19nys # or npx covid19nys
 
-The above command will also download the latest version of Chromium as the package uses puppeteer.
+Select a city (Ctrl + C to exit)
+❯ Albany
+  Broome
+  Delaware
+  Dutchess
+  Erie
+  Greene
+  Herkimer
+(Move up and down to reveal more choices)
+
+Albany: 8
+```
 
 ## Development
 
