@@ -8,7 +8,7 @@
  */
 
 // CONSTANTS
-const URL = 'https://www.health.ny.gov/diseases/communicable/coronavirus/';
+const URL = 'https://on.ny.gov/33yu0cR';
 
 // Local utils
 const checkCases = require('./cases');

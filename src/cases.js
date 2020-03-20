@@ -22,14 +22,11 @@ const checkCases = async url => {
     // Get DOM elements
     let data = [];
     $('tr td', html).each(function() {
-      data.push($(this).text());
-    });
-
-    // Clean names
-    data.forEach((elem, index, arr) => {
-      if (elem === 'New York City:') arr.splice(index, 1, 'New York City');
-      if (elem === 'New York State (Outside of NYC)')
-        arr.splice(index, 1, 'New York State (excluding NYC)');
+      data.push(
+        $(this)
+          .text()
+          .replace(/[,]/gi, '')
+      );
     });
 
     // Format results

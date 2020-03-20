@@ -17,7 +17,7 @@ The above command will also download the latest version of Chromium as the packa
 ```
 covid19nys # or npx covid19nys
 
-Select a city (Ctrl + C to exit)
+Select a county (Ctrl + C to exit)
 ❯ Albany
   Broome
   Delaware
@@ -43,4 +43,4 @@ npm start
 ## Resources
 
 - [BNO News](https://bnonews.com/index.php/2020/02/the-latest-coronavirus-cases/)
-- [NYS Department of Health](https://www.health.ny.gov/diseases/communicable/coronavirus/)
+- [NYS Department of Health](https://on.ny.gov/33yu0cR)

@@ -12,7 +12,7 @@ const inq = cases => {
     .prompt([
       {
         type: 'list',
-        message: 'Select a city (Ctrl+C to exit)',
+        message: 'Select a county (Ctrl + C to exit)',
         name: 'city',
         choices: Object.keys(cases)
       }
