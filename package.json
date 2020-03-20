@@ -1,6 +1,6 @@
 {
   "name": "covid19nys",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Track COVID-19 cases in New York state",
   "main": "src/index.js",
   "bin": "src/index.js",
