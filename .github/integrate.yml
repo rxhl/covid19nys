@@ -1,0 +1,15 @@
+name: covid19nys CI
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  test_covid19nys:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
