@@ -1,11 +1,13 @@
 name: covid19nys CI
 
 on:
+  push:
+    branches: [master]
   pull_request:
     branches: [master]
 
 jobs:
-  test_covid19nys:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
