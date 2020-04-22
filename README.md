@@ -36,7 +36,7 @@ Make sure you have node > 9.x.x installed.
 
 ```
 git clone https://github.com/rxhl/covid19nys.git && cd covid19nys
-npm install
+npm ci
 npm start
 ```
 
