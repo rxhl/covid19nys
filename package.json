@@ -6,7 +6,8 @@
   "bin": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "node --version"
+    "test": "node --version",
+    "pub": "node --help"
   },
   "keywords": [
     "covid",

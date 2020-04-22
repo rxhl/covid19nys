@@ -1,7 +1,7 @@
 name: covid19nys CI
 
 on:
-  pull_request:
+  push:
     branches: [master]
 
 jobs:
@@ -13,4 +13,4 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
-      - run: npm test
+      - run: npm pub
