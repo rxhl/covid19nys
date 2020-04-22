@@ -2,6 +2,8 @@
 
 ![npm](https://img.shields.io/npm/v/covid19nys)
 
+![covid19nys CI](https://github.com/rxhl/covid19nys/workflows/covid19nys%20CI/badge.svg)
+
 CLI utility to track COVID-19 cases in New York state.
 
 ## Install
