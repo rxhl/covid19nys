@@ -11,8 +11,6 @@ CLI utility to track COVID-19 cases in New York state.
 npm i -g covid19nys
 ```
 
-The above command will also download the latest version of Chromium as the package uses puppeteer.
-
 ## Usage
 
 ```
@@ -28,7 +26,11 @@ Select a county (Ctrl + C to exit)
   Herkimer
 (Move up and down to reveal more choices)
 
-Albany: 8
++===========================+
+  Cases as of 5/2/2020
+
+  Albany: 1238
++===========================+
 ```
 
 ## Development

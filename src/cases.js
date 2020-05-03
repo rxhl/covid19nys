@@ -1,43 +1,38 @@
+#!/usr/bin/env node
 /**
  * cases.js
  *
- * Scrapes the New York State Dept of Health web page
- * for the most recent COVID-19 count.
- *
  * Author: Rahul Sharma
  */
-const $ = require('cheerio');
 
-// Local utils
-const configureBrowser = require('./puppeteer');
+const fetch = require('node-fetch');
 
-const checkCases = async url => {
-  let counts = {};
-  try {
-    // Load page
-    const page = await configureBrowser(url);
-    await page.reload();
-    html = await page.evaluate(() => document.body.innerHTML);
+class Cases {
+  static caseCount = async () => {
+    // Get current local date (YYYY-MM-DD)
+    const currDate = new Date();
+    const dateStr = `${currDate.getFullYear()}-${currDate.getMonth() + 1}-${
+      currDate.getDate() - 1
+    }`;
 
-    // Get DOM elements
-    let data = [];
-    $('tr td', html).each(function() {
-      data.push(
-        $(this)
-          .text()
-          .replace(/[,]/gi, '')
-      );
-    });
+    // Get current url
+    const currUrl = `https://health.data.ny.gov/resource/xdss-u53e.json?test_date=${dateStr}`;
 
-    // Format results
-    for (let i = 0; i + 1 < data.length; i += 2) {
-      counts[data[i]] = +data[i + 1];
+    try {
+      const data = await fetch(currUrl);
+      const res = await data.json();
+
+      // Create a { county: case } map
+      const countyMap = res.map((elem) => ({
+        [elem['county']]: +elem['cumulative_number_of_positives'],
+      }));
+
+      // Reduce to a single object
+      return Object.assign({}, ...countyMap);
+    } catch (error) {
+      console.error(error);
     }
-  } catch (err) {
-    console.error(err);
-  } finally {
-    return counts;
-  }
-};
+  };
+}
 
-module.exports = checkCases;
+module.exports = Cases;
