@@ -1,6 +1,6 @@
 {
   "name": "covid19nys",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Track COVID-19 cases in New York state",
   "main": "src/index.js",
   "bin": "src/index.js",
@@ -17,10 +17,8 @@
   "author": "Rahul Sharma",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
     "inquirer": "^7.1.0",
-    "node-fetch": "^2.6.0",
-    "puppeteer": "^2.1.1"
+    "node-fetch": "^2.6.0"
   },
   "repository": {
     "type": "git",
